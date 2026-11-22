@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StandUp Base — российские стендап-комики</title>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="spot" aria-hidden="true"></div>
+
+<div id="home-view">
+    <div class="logo">StandUp Base</div>
+    <div class="search-wrapper">
+        <input type="text" class="search-input" id="main-search" placeholder="Комик, новость, видео. Например: Алексей Щербаков" autocomplete="off">
+    </div>
+    <div class="buttons">
+        <button class="btn" onclick="randomPunchline()">Случайный комик</button>
+    </div>
+    <div id="home-stats"></div>
+    <div class="popular-hints" id="popular-hints"></div>
+    <div id="home-news"></div>
+</div>
+
+<div id="results-view">
+    <div class="header-mini">
+        <div class="logo-mini" onclick="goHome()">StandUp Base</div>
+        <div class="search-mini">
+            <input type="text" class="search-input" id="mini-search" placeholder="Уточнить запрос" autocomplete="off">
+        </div>
+        <button class="btn btn-ghost" onclick="goHome()">На главную</button>
+    </div>
+
+    <div class="autocorrect" id="autocorrect-msg" style="display:none;">
+        Показаны результаты по запросу: <span id="corrected-word"></span>
+    </div>
+    <div class="info-banner" id="info-banner" style="display:none;"></div>
+    <div class="chip-row" id="suggest-row" style="display:none;"></div>
+    <div class="query-meta" id="query-meta" style="display:none;"></div>
+    <div class="tabs" id="tabs"></div>
+
+    <div class="layout-grid">
+        <div class="results-list" id="results-list"></div>
+        <div class="knowledge-panel" id="knowledge-panel"></div>
+    </div>
+</div>
+
+<div class="ver">сборка v5</div>
+<script src="script.js"></script>
+</body>
+</html>
